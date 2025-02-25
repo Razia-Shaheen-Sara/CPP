@@ -25,9 +25,8 @@ An **object** is an instance of a class. It has its own copy of the class's attr
 ```cpp
 class Car {  // Blueprint (Class)
 
-    std::string brand;  // Attribute: Feature of the car
     void honk() {  // Method: Function to make the car honk
-        std::cout << "Beep Beep!" << std::endl;
+        std::cout << "Beep Beep!" << std::endl;//**`std::cout`** is an **object** of the `std::ostream` class
     }
 };
 
@@ -37,8 +36,11 @@ int main() {
     myCar.honk();  // Calling a method: The car honks (Behavior)
 }
 ```
-
+std::cout: Outputs data to the console.
+std::endl: Adds a newline and flushes the output stream.
+they do not need to be used together
 
 ## std::cout
+
 -To read about it:
  ``man 3 std::cout``
