@@ -1,4 +1,4 @@
-# Short Tutorial to begin CPP
+# Intro to CPP
 
 ### **Class, Object, and Behavior in C++**
 
@@ -12,8 +12,6 @@ An **object** is an instance of a class. It has its own copy of the class's attr
 - The **behavior** of an object is defined by the **methods** (functions) of its class.
 - Methods define what the object can do (e.g., modifying data, interacting with other objects).
 ### **Metaphor to Explain Class, Object, Attribute, Function, Method, and Behavior**
-
-Think of a **class** as a **blueprint** for building a **car**.
 
 - **Class**: The blueprint that describes how the car will be built (structure and capabilities).
 - **Object**: A **car** created using that blueprint. It's a specific instance of the blueprint.
