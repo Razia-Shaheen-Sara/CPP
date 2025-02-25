@@ -24,7 +24,7 @@ An **object** is an instance of a class. It has its own copy of the class's attr
 
 ```cpp
 class Car {  // Blueprint (Class)
-public:
+
     std::string brand;  // Attribute: Feature of the car
     void honk() {  // Method: Function to make the car honk
         std::cout << "Beep Beep!" << std::endl;
@@ -36,26 +36,8 @@ int main() {
     myCar.brand = "Toyota";  // Setting an attribute: The car's brand
     myCar.honk();  // Calling a method: The car honks (Behavior)
 }
+```
 
-#### **Example:**
-
-```cpp
-#include <iostream>
-
-class Car {
-    std::string brand;
-    void honk() {
-        std::cout << "Beep Beep!" << std::endl;  // Behavior: honk
-    }
-};
-
-int main() {
-    Car myCar;          // Object `myCar` of class `Car`
-    myCar.brand = "Toyota";  // Setting an attribute
-    myCar.honk();            // Calling a method (behavior)
-    std::cout << myCar.brand << std::endl;  // Accessing an attribute
-    return 0;
-}
 
 ## std::cout
 -To read about it:
