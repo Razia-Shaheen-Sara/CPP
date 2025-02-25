@@ -32,11 +32,17 @@ int main() {
     myCar.honk();  // Calling a method: The car honks (Behavior)
 }
 ```
-std::cout: Outputs data to the console.
-std::endl: Adds a newline and flushes the output stream.
-They do not need to be used together
+std::cout: Outputs data to the console.\
+std::endl: Adds a newline and flushes the output stream.\
+They do not need to be used together\
 The `<<` operator is known as the **stream insertion operator**. It is used to send data into an **output stream**, such as `std::cout`.
-
 
 Manual:
  ``man 3 std::cout``
+
+ ``std::cout << " ";  // Prints a single space``
+ ``std::cout << ' ';  // Prints a single space (character)``
+ 
+ If you don't use quotes, the compiler interprets the space as a separator between different arguments or commands, not as a character to print.
+
+
