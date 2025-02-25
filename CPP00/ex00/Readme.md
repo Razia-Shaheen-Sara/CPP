@@ -1,22 +1,18 @@
 # Intro to CPP
 
-### **Class, Object, and Behavior in C++**
+### **Class and Object in C++**
 
 #### **Class**  
 A **class** is a blueprint for creating objects. It defines **attributes** (data) and **methods** (functions) that describe the behavior of the objects.
 
 #### **Object**  
-An **object** is an instance of a class. It has its own copy of the class's attributes and can call its methods.
+An **object** is an instance or product made of a class. It has its own copy of the class's attributes and can call its methods.
 
-#### **Behavior**  
-- The **behavior** of an object is defined by the **methods** (functions) of its class.
-- Methods define what the object can do (e.g., modifying data, interacting with other objects).
-### **Metaphor to Explain Class, Object, Attribute, Function, Method, and Behavior**
+### **Metaphor to Explain**
 
 - **Class**: The blueprint that describes how the car will be built (structure and capabilities).
 - **Object**: A **car** created using that blueprint. It's a specific instance of the blueprint.
 - **Attributes**: The **features** of the car, like color, brand, and engine type. These are the **data** associated with the car (object).
-- **Function**: The **actions** that can be performed on the car. For example, honking or accelerating. It's a **task** the car can do.
 - **Method**: A function that is defined inside the **car blueprint** (class). It's the action available to any car (object).
 - **Behavior**: The **result** of performing actions on the car. For instance, when the car **honk** method is called, the behavior is the sound of the horn.
 
@@ -38,9 +34,7 @@ int main() {
 ```
 std::cout: Outputs data to the console.
 std::endl: Adds a newline and flushes the output stream.
-they do not need to be used together
-
-## std::cout
+They do not need to be used together
 
 -To read about it:
  ``man 3 std::cout``
