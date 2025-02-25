@@ -43,7 +43,6 @@ int main() {
 #include <iostream>
 
 class Car {
-public:
     std::string brand;
     void honk() {
         std::cout << "Beep Beep!" << std::endl;  // Behavior: honk
