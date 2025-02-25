@@ -35,6 +35,8 @@ int main() {
 std::cout: Outputs data to the console.
 std::endl: Adds a newline and flushes the output stream.
 They do not need to be used together
+The `<<` operator is known as the **stream insertion operator**. It is used to send data into an **output stream**, such as `std::cout`.
+
 
 Manual:
  ``man 3 std::cout``
