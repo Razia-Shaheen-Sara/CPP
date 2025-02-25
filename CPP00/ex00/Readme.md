@@ -36,5 +36,5 @@ std::cout: Outputs data to the console.
 std::endl: Adds a newline and flushes the output stream.
 They do not need to be used together
 
--To read about it:
+Manual:
  ``man 3 std::cout``
