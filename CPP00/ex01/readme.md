@@ -1,3 +1,9 @@
+
+A **class** in C++ is similar to a **struct** in C, but with some differences:
+
+-In C++, struct defaults to public, while class defaults to private.
+-In C, struct only holds data, while C++ class can have both data and functions.
+
 ### Private vs Public in a C++ Class
 
 In C++, a **class** is a **blueprint** for creating objects. It defines **attributes (variables)** and **methods (functions)**.
