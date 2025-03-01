@@ -5,6 +5,7 @@ In C++, a **class** is a **blueprint** for creating objects. It defines **attrib
 #### **Access Specifiers:**
 - **`private:`** (only accessible inside the class)
   - These members **cannot** be accessed directly from outside the class.
+  - **Only the class itself** can access them.
 
   
 - **`public:`** (accessible from outside the class)
