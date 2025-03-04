@@ -34,7 +34,7 @@ class Contact {
 
 #endif
 ```
-# Beginners Libraries
+# Beginner's Libraries with example functions
 - iostream : 10+ (e.g., std::cout, std::cin, std::cerr, std::getline(), etc.)
 - fstream   : 5-10 (e.g., std::ifstream, std::ofstream, std::fstream, open(), close(), getline(), etc.)
 - string : 20+ (e.g., std::string::length(), std::string::substr(), std::string::find(), std::string::c_str(), etc.)
