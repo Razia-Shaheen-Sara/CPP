@@ -27,13 +27,9 @@ class Contact {
 		std::string name;  // Private variable
 
 	public:
-		void setName(std::string new_name) {  // Public function
-			name = new_name;
-		}
-
-		std::string getName() {  // Public function
-			return name;
-		}
+		void setName(std::string new_name)  // Public function
+		std::string getName()  // Public function
+			
 };
 
 #endif
