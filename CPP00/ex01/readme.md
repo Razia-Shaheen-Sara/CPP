@@ -34,3 +34,9 @@ class Contact {
 
 #endif
 ```
+# Beginners Libraries
+- <iostream> : 10+ (e.g., std::cout, std::cin, std::cerr, std::getline(), etc.)
+- <fstream>   : 5-10 (e.g., std::ifstream, std::ofstream, std::fstream, open(), close(), getline(), etc.)
+- <string>  : 20+ (e.g., std::string::length(), std::string::substr(), std::string::find(), std::string::c_str(), etc.)
+- <cstdlib> : 10+ (e.g., atoi(), exit(), malloc() (NOT ALLOWED), free() (NOT ALLOWED), rand(), etc.)
+- <cmath> :  20+ (e.g., sqrt(), pow(), sin(), cos(), abs(), etc.)
