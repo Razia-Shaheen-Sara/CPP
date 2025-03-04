@@ -1,21 +1,16 @@
 # Class
-A **class** in C++ is similar to a **struct** in C, but with some differences:
+In C++, a **class** is a **blueprint** for creating objects. It defines **attributes (variables)** and **methods (functions)**.\
+A **class** in C++ is similar to a **struct** in C, with some differences:
 
 -In C++, struct defaults to public, while class defaults to private.\
--In C, struct only holds data, while C++ class can have both data and functions.
+-In C, struct holds variables and function pointers, while C++ class can have both data and functions.
 
 ### Private vs Public in a C++ Class
 
-In C++, a **class** is a **blueprint** for creating objects. It defines **attributes (variables)** and **methods (functions)**.
-
-#### **Access Specifiers:**
 - **`private:`** (only accessible inside the class)
-  - These members **cannot** be accessed directly from outside the class.
-  - **Only the class itself** can access them.
-  - They are usually variables
+  - Accessible only inside the class. Usually variables but can also be helper functions.
 
   
 - **`public:`** (accessible from outside the class)
-  - These members **can** be accessed from outside using an object.
-  - They are usually functions
+  - Accessible from outside the class using an object. Usually functions, but variables can be public (though it's not recommended for encapsulation).
 
