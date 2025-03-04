@@ -19,8 +19,6 @@ It is defined in header files. basic structure will look like this
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include "PhoneBook.hpp"
-
 class Contact {
 	private:
 
