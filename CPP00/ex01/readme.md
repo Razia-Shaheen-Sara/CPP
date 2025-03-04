@@ -40,3 +40,11 @@ class Contact {
 - string : 20+ (e.g., std::string::length(), std::string::substr(), std::string::find(), std::string::c_str(), etc.)
 - cstdlib : 10+ (e.g., atoi(), exit(), malloc() (NOT ALLOWED), free() (NOT ALLOWED), rand(), etc.)
 - cmath :  20+ (e.g., sqrt(), pow(), sin(), cos(), abs(), etc.)
+
+# Steps
+### 1. Define a Contact Class:
+This class stores details about a contact, such as name, phone number, etc.
+
+### 2. Define a PhoneBook Class:
+This class manages multiple contacts.
+It should allow you to add new contacts and search for existing contacts.
