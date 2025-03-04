@@ -12,8 +12,10 @@ In C++, a **class** is a **blueprint** for creating objects. It defines **attrib
 - **`private:`** (only accessible inside the class)
   - These members **cannot** be accessed directly from outside the class.
   - **Only the class itself** can access them.
+  - They are usually variables
 
   
 - **`public:`** (accessible from outside the class)
   - These members **can** be accessed from outside using an object.
+  - They are usually functions
 
