@@ -1,4 +1,4 @@
-
+# Class
 A **class** in C++ is similar to a **struct** in C, but with some differences:
 
 -In C++, struct defaults to public, while class defaults to private.\
