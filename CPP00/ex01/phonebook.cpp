@@ -11,31 +11,61 @@ void PhoneBook::removeOldestContact()
         contacts[i] = contacts[i + 1];
 		i++;
     }
-    currentIndex--;  // Maintain accurate count
+    contactIndex--;  // Maintain accurate count
 }
 
 void PhoneBook::addContact(Contact newContact) 
 {
-    if (currentIndex >= 8) 
+    if (contactIndex >= 8) 
         removeOldestContact();
-    contacts[currentIndex] = newContact;
-    currentIndex++;
+    contacts[contactIndex] = newContact;
+    contactIndex++;
 }
 
-bool PhoneBook::searchContacts(std::string searchName) 
+static std::string putDot(std::string str) 
 {
-    int i = 0;
-	while (i < 8) 
+	if (str.length() > 10)
+		return str.substr(0, 9) + ".";
+	return (str);
+}
+//std::setw(n) sets the width of the next output field to n characters.
+//It’s used with std::cout to format text alignment and spacing.
+
+void PhoneBook::displayAllContacts() 
+{
+
+	if (contactIndex == 0) 
 	{
-        if (contacts[i].firstName == searchName || contacts[i].lastName == searchName) 
-		{
-            // Display the contact details
-            std::cout << "Found: " << contacts[i].firstName << " " << contacts[i].lastName << std::endl;
-            return true;
-        }
+		std::cout << "No contacts to display.\n";
+		return;
+	}
+	int i = 0;
+	std::cout << std::setw(10) << "Index" << "|"
+			  << std::setw(10) << "First Name" << "|"
+			  << std::setw(10) << "Last Name" << "|"
+			  << std::setw(10) << "Nickname" << "\n";
+	while (i < contactIndex) 
+	{
+		std::cout << std::setw(10) << i << "|"
+				  << std::setw(10) << putDot(contacts[i].firstName) << "|"
+				  << std::setw(10) << putDot(contacts[i].lastName) << "|"
+				  << std::setw(10) << putDot(contacts[i].nickname) << "\n";
 		i++;
-    }
-    return (false);  // Contact not found
+	}
+}
+
+void PhoneBook::displayContactDetails(int index) 
+{
+	if (index >= 0 && index < contactIndex) 
+	{
+		std::cout << "First Name: " << contacts[index].firstName << "\n";
+		std::cout << "Last Name: " << contacts[index].lastName << "\n";
+		std::cout << "Nickname: " << contacts[index].nickname << "\n";
+		std::cout << "Phone Number: " << contacts[index].phoneNumber << "\n";
+		std::cout << "Darkest Secret: " << contacts[index].darkestSecret << "\n";
+	} 
+	else 
+		std::cout << "Invalid index.\n";
 }
 
 //std::cin reads input up to the first whitespace.
@@ -47,13 +77,12 @@ int main()
     std::string command;
 	Contact		newContact;
     
-    myBook.currentIndex = 0;
+    myBook.contactIndex = 0;
 	while (true) 
 	{
         std::cout << "Please ADD, SEARCH or EXIT\n";
         std::getline(std::cin, command);
-
-        if (command == "ADD") 
+        if (command == "ADD" || command == "add") 
 		{
             std::cout << "Enter First Name: ";
             std::getline(std::cin, newContact.firstName);
@@ -67,18 +96,21 @@ int main()
             std::getline(std::cin, newContact.darkestSecret);
             myBook.addContact(newContact);
         }
-        else if (command == "SEARCH") 
+        else if (command == "SEARCH" || command == "search") 
 		{
-            std::string searchName;
-            std::cout << "Enter First or Last Name to search: ";
-            std::getline(std::cin, searchName);
-            
-            if (!myBook.searchContacts(searchName)) 
+            myBook.displayAllContacts();
+			std::string input;
+			std::cout << "Enter the index to display full info: ";
+			std::getline(std::cin, input);
+			if (input.length() == 1 && std::isdigit(input[0])) 
 			{
-                std::cout << "Contact not found!" << std::endl;
-            }
+				int index = input[0] - '0';
+				myBook.displayContactDetails(index);
+			} 
+			else 
+				std::cout << "Invalid input\n";
         }
-        else if (command == "EXIT") 
+        else if (command == "EXIT" || command == "exit") 
             break;
         else
             std::cout << "Invalid command. Try again." << std::endl;
