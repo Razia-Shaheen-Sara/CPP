@@ -1,50 +1,111 @@
-# Class
-In C++, a **class** is a **blueprint** for creating objects. It defines **attributes (variables)** and **methods (functions)**.\
-A **class** in C++ is similar to a **struct** in C, with some differences:
 
--In C++, struct defaults to public, while class defaults to private.\
--In C, struct holds variables and function pointers, while C++ class can have both data and functions.
+# 📘 Intro to C++
 
-### Private vs Public in a C++ Class
+### 🔹 Class vs Object
 
-- **`private:`** (only accessible inside the class)
-  - Accessible only inside the class. Usually variables but can also be helper functions.
+- **Class** = Blueprint  
+  Defines **attributes** (data) and **methods** (functions).
+- **Object** = A real thing created from a class  
+  Has its own copy of the class’s attributes and can use its methods.
 
-  
-- **`public:`** (accessible from outside the class)
-  - Accessible from outside the class using an object. Usually functions, but variables can be public (though it's not recommended for encapsulation).
-
-It is defined in header files. basic structure will look like this
+#### 🔧 Example:
 ```cpp
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
-
-#include <iostream>  // For std::cout, std::cin
-#include <string>    // For std::string
-
-class Contact {
-	private:
-		std::string name;  // Private variable
-
-	public:
-		void setName(std::string new_name)  // Public function
-		std::string getName()  // Public function
-			
+class Car {
+    void honk() {
+        std::cout << "Beep Beep!" << std::endl;
+    }
 };
 
-#endif
+int main() {
+    Car myCar;        // Object
+    myCar.honk();     // Method call
+}
 ```
-# Beginner's Libraries with example functions
-- iostream : 10+ (e.g., std::cout, std::cin, std::cerr, std::getline(), etc.)
-- fstream   : 5-10 (e.g., std::ifstream, std::ofstream, std::fstream, open(), close(), getline(), etc.)
-- string : 20+ (e.g., std::string::length(), std::string::substr(), std::string::find(), std::string::c_str(), etc.)
-- cstdlib : 10+ (e.g., atoi(), exit(), malloc() (NOT ALLOWED), free() (NOT ALLOWED), rand(), etc.)
-- cmath :  20+ (e.g., sqrt(), pow(), sin(), cos(), abs(), etc.)
 
-# Steps
-### 1. Define a Contact Class:
-This class stores details about a contact, such as name, phone number, etc.
+---
 
-### 2. Define a PhoneBook Class:
-This class manages multiple contacts.
-It should allow you to add new contacts and search for existing contacts.
+### 🔹 Metaphor
+| Concept    | Example           |
+|------------|-------------------|
+| Class      | Car blueprint     |
+| Object     | Real car (myCar)  |
+| Attribute  | Brand, color      |
+| Method     | honk(), start()   |
+| Behavior   | What the method does (e.g., sound horn) |
+
+
+# iostream Library in C++
+
+## **`iostream`** Overview
+- **Type**: Library
+- **Purpose**: Provides facilities for input and output (I/O) operations in C++.
+- **Included in**: `<iostream>`
+  
+## **Key Components**
+1. **`std::cin`**: 
+   - Type: Input stream object (instance of `std::istream`).
+   - Purpose: Used to receive input from the user (keyboard).
+   - Example:
+     ```cpp
+     int age;
+     std::cin >> age;  // Reads an integer from the user
+     ```
+   
+2. **`std::cout`**: 
+   - Type: Output stream object (instance of `std::ostream`).
+   - Purpose: Used to output data to the console (screen).
+   - Example:
+     ```cpp
+     std::cout << "Hello, world!" << std::endl;  // Outputs to the console
+     ```
+
+3. **`std::cerr`**:
+   - Type: Output stream object (instance of `std::ostream`).
+   - Purpose: Used for error messages, output to standard error stream.
+   - Example:
+     ```cpp
+     std::cerr << "Error occurred!" << std::endl;  // Error message to stderr
+     ```
+
+4. **`std::clog`**:
+   - Type: Output stream object (instance of `std::ostream`).
+   - Purpose: Used for logging messages, typically to standard error.
+   - Example:
+     ```cpp
+     std::clog << "Logging information..." << std::endl;  // Logs message
+     ```
+
+---
+
+## **Key Features**
+- **Stream-based I/O**: C++ handles I/O through streams, which are sequences of characters flowing in and out of programs.
+- **Formatted I/O**: You can manipulate the format of input/output using manipulators like `std::setw`, `std::fixed`, etc.
+- **Type Safety**: **`std::cin`** and **`std::cout`** automatically manage types (e.g., reading integers as integers).
+
+---
+
+## **Example of Usage**
+```cpp
+#include <iostream>
+
+int main() {
+    int age;
+    std::cout << "Enter your age: ";
+    std::cin >> age;  // Input from user
+
+    std::cout << "Your age is: " << age << std::endl;  // Output to user
+    return 0;
+}
+
+---
+
+# ☎️ Mini PhoneBook Project (Steps)
+
+1. **Define a `Contact` struct**  
+   Stores: name, phone, nickname, darkest secret
+
+2. **Create a `PhoneBook` class**  
+   Stores 8 `Contact` objects  
+   Has methods:
+   - `addContact()`: Add new contact (replace oldest if full)
+   - `searchContacts()`: Show list, allow lookup by index
