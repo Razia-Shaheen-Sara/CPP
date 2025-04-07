@@ -1,25 +1,10 @@
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
+#include "Contact.hpp"
 
-/**
- * Removes the oldest contact (index 0) by shifting all contacts left
- */
-void PhoneBook::removeOldestContact()
+//keep the constuctor's work separate
+PhoneBook::PhoneBook() 
 {
-    int i = 0;
-	while (i < 7)
-    {
-        contacts[i] = contacts[i + 1];
-		i++;
-    }
-    contactIndex--;  // Maintain accurate count
-}
-
-void PhoneBook::addContact(Contact newContact) 
-{
-    if (contactIndex >= 8) 
-        removeOldestContact();
-    contacts[contactIndex] = newContact;
-    contactIndex++;
+    contactIndex = 0;
 }
 
 static std::string putDot(std::string str) 
@@ -76,27 +61,20 @@ int main()
     PhoneBook	myBook;
     std::string command;
 	Contact		newContact;
-    
-    myBook.contactIndex = 0;
+	
 	while (true) 
 	{
-        std::cout << "Please ADD, SEARCH or EXIT\n";
-        std::getline(std::cin, command);
-        if (command == "ADD" || command == "add") 
+    
+		std::cout << "Please ADD, SEARCH or EXIT\n";
+		if (std::cin.eof()) 
 		{
-            std::cout << "Enter First Name: ";
-            std::getline(std::cin, newContact.firstName);
-            std::cout << "Enter Last Name: ";
-            std::getline(std::cin, newContact.lastName);
-            std::cout << "Enter Nickname: ";
-            std::getline(std::cin, newContact.nickname);
-            std::cout << "Enter Phone Number: ";
-            std::getline(std::cin, newContact.phoneNumber);
-            std::cout << "Enter Darkest Secret: ";
-            std::getline(std::cin, newContact.darkestSecret);
-            myBook.addContact(newContact);
+            std::cout << "\nExiting program (EOF received)\n";
+            break;  // Exit the loop immediately
         }
-        else if (command == "SEARCH" || command == "search") 
+        std::getline(std::cin, command);
+        if (command == "ADD" || command == "add" || command == "Add") 
+            myBook.processAdd();
+        else if (command == "SEARCH" || command == "search" || command == "Search") 
 		{
             myBook.displayAllContacts();
 			std::string input;
@@ -110,11 +88,10 @@ int main()
 			else 
 				std::cout << "Invalid input\n";
         }
-        else if (command == "EXIT" || command == "exit") 
+        else if (command == "EXIT" || command == "exit" || command == "Exit") 
             break;
         else
             std::cout << "Invalid command. Try again." << std::endl;
     }
     return 0;
 }
-

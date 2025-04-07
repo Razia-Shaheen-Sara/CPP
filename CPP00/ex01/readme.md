@@ -5,7 +5,7 @@
 
 - **Class** = Blueprint  
   Defines **attributes** (data) and **methods** (functions).
-- **Object** = A real thing created from a class  
+- **Object** = A real example/instance created from a class  
   Has its own copy of the class’s attributes and can use its methods.
 
 #### 🔧 Example:
@@ -88,7 +88,8 @@ int main() {
 ```cpp
 #include <iostream>
 
-int main() {
+int main() 
+{
     int age;
     std::cout << "Enter your age: ";
     std::cin >> age;  // Input from user
@@ -98,14 +99,16 @@ int main() {
 }
 
 ---
+### 🔧 What is a Constructor (in C++)?
 
-# ☎️ Mini PhoneBook Project (Steps)
+A **constructor** is a special function in C++ that runs automatically when an object is created.  
+It’s used to **initialize data members**. It can be private or public. 
 
-1. **Define a `Contact` struct**  
-   Stores: name, phone, nickname, darkest secret
+---
 
-2. **Create a `PhoneBook` class**  
-   Stores 8 `Contact` objects  
-   Has methods:
-   - `addContact()`: Add new contact (replace oldest if full)
-   - `searchContacts()`: Show list, allow lookup by index
+Some data should be private to control access, preventing direct modifications(setting wrong values) from outside the class.
+
+EDGE cases:
+
+1. Field for a saved contact cannot be empty(according to subject)
+2. EOF or ctrl+D cannot keep looping forever
