@@ -17,6 +17,11 @@ class Contact
 	std::string nickname;
 	std::string phoneNumber;
 	std::string darkestSecret;
+
+	static const size_t MAX_NAME_LEN = 20;
+    static const size_t MAX_NICKNAME_LEN = 15;
+    static const size_t MAX_PHONE_LEN = 15;
+    static const size_t MAX_SECRET_LEN = 30;
 };
 
 #endif

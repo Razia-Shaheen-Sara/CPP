@@ -66,13 +66,13 @@ int main()
 	{
     
 		std::cout << "Please ADD, SEARCH or EXIT\n";
+		std::getline(std::cin, command);
 		if (std::cin.eof()) 
 		{
             std::cout << "\nExiting program (EOF received)\n";
-            break;  // Exit the loop immediately
+            break ;
         }
-        std::getline(std::cin, command);
-        if (command == "ADD" || command == "add" || command == "Add") 
+        if (command == "ADD" || command == "add" || command == "Add")
             myBook.processAdd();
         else if (command == "SEARCH" || command == "search" || command == "Search") 
 		{
