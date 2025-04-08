@@ -99,6 +99,14 @@ int main()
 }
 
 ---
+
+### **Namespaces** in a Library
+
+A namespace is used within a library/header to organize and group related pieces of code, preventing **naming** conflicts. It works like a folder for classes/functions in a library or header file.
+
+## **Example**
+the std:: part in the previous examples are namespace from the standard c++ library
+
 ### 🔧 What is a Constructor (in C++)?
 
 A **constructor** is a special function in C++ that runs automatically when an object is created.  
@@ -112,3 +120,4 @@ EDGE cases:
 
 1. Field for a saved contact cannot be empty(according to subject)
 2. EOF or ctrl+D cannot keep looping forever
+3. Program should not accept garbage input after executable
