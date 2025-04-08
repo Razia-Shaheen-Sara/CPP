@@ -1,3 +1,4 @@
+## Concepts for C00 - ex01
 
 ### 🔹 Class vs Object
 
@@ -32,13 +33,14 @@
 
 ---
 
-## **Namespaces**
+### **Namespaces**
 
-A namespace is used within a library/header to organize and group related pieces of code, preventing **naming** conflicts. It works like a folder for classes/functions in a library or header file.
+A namespace is used within a library/header to organize and group related pieces of code, preventing **naming** conflicts. It works like a folder for classes/functions in a library or header file.\ 
+
  **Example**
 the **std::** part in the previous examples are namespace from the standard c++ library
 
-### 🔧 What is a Constructor (in C++)?
+### 🔧 What is a Constructor and deconstructor (in C++)?
 
 A **constructor** is a special function in C++ that runs automatically when an object is created.  
 It’s used to **initialize data members**. It can be private or public. 
@@ -48,22 +50,18 @@ It’s used to **initialize data members**. It can be private or public.
 **private data**
 Some data should be private to control access, preventing direct modifications(setting wrong values) from outside the class.
 
-### New concepts for the project:
-
-1. The class **contact** should have private parts! It is not mentioned in the subject but the eval very clearly asks for that!
-2. when we use private parts, those are not accessible from outside code. Then we need-----
-3. 🔐 Getters and Setters
+🔐 **Getters and Setters**
 Private fields can't be accessed directly from outside the class.
 We use:
-
 Setters to assign values to private members
 Example: setFirstName(string)
 
 Getters to retrieve values
 Example: getFirstName()
 
-EDGE cases:
+## EDGE cases:## Points to note for the project 
 
 1. Field for a saved contact cannot be empty(according to subject)
 2. EOF or ctrl+D cannot keep looping forever
 3. Program should not accept garbage input after executable
+4. The class **contact** should be in private field!!! It is not mentioned in the subject but the eval very clearly asks for that!
