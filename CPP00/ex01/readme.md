@@ -1,6 +1,4 @@
 
-# 📘 Intro to C++
-
 ### 🔹 Class vs Object
 
 - **Class** = Blueprint  
@@ -10,12 +8,9 @@
 
 ---
 
+### iostream Library in C++
 
-# iostream Library in C++
-
-- **Type**: Library
-- **Purpose**: Provides facilities for input and output (I/O) operations in C++.
-- **Included in**: `<iostream>`
+- **Purpose**: Provides facilities for input and output (I/O) operations in C++. **Included in**: `<iostream>`
   
 ## **Example Components**
 1. **`std::cin`**: 
@@ -35,53 +30,13 @@
      std::cout << "Hello, world!" << std::endl;  // Outputs to the console
      ```
 
-3. **`std::cerr`**:
-   - Type: Output stream object (instance of `std::ostream`).
-   - Purpose: Used for error messages, output to standard error stream.
-   - Example:
-     ```cpp
-     std::cerr << "Error occurred!" << std::endl;  // Error message to stderr
-     ```
-
-4. **`std::clog`**:
-   - Type: Output stream object (instance of `std::ostream`).
-   - Purpose: Used for logging messages, typically to standard error.
-   - Example:
-     ```cpp
-     std::clog << "Logging information..." << std::endl;  // Logs message
-     ```
-
 ---
 
-## **Key Features**
-- **Stream-based I/O**: C++ handles I/O through streams, which are sequences of characters flowing in and out of programs.
-- **Formatted I/O**: You can manipulate the format of input/output using manipulators like `std::setw`, `std::fixed`, etc.
-- **Type Safety**: **`std::cin`** and **`std::cout`** automatically manage types (e.g., reading integers as integers).
-
----
-
-## **Example of Usage**
-```cpp
-#include <iostream>
-
-int main() 
-{
-    int age;
-    std::cout << "Enter your age: ";
-    std::cin >> age;  // Input from user
-
-    std::cout << "Your age is: " << age << std::endl;  // Output to user
-    return 0;
-}
-```
----
-
-### **Namespaces** in a Library
+## **Namespaces**
 
 A namespace is used within a library/header to organize and group related pieces of code, preventing **naming** conflicts. It works like a folder for classes/functions in a library or header file.
-
-## **Example**
-the std:: part in the previous examples are namespace from the standard c++ library
+ **Example**
+the **std::** part in the previous examples are namespace from the standard c++ library
 
 ### 🔧 What is a Constructor (in C++)?
 
@@ -106,13 +61,6 @@ Example: setFirstName(string)
 
 Getters to retrieve values
 Example: getFirstName()
-
-
-
-
-
-
-
 
 EDGE cases:
 
