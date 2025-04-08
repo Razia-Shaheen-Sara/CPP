@@ -6,20 +6,20 @@
 #    By: rshaheen <rshaheen@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2025/04/04 18:10:04 by rshaheen      #+#    #+#                  #
-#    Updated: 2025/04/07 14:15:26 by rshaheen      ########   odam.nl          #
+#    Updated: 2025/04/08 13:51:31 by rshaheen      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = phonebook
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++11
 
 CC = c++
 
 OBJ_DIR = obj
 
-SRC = phonebook.cpp add.cpp
+SRC = main.cpp PhoneBook.cpp Contact.cpp
 
 OBJECTS = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 

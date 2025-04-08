@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   PhoneBook.hpp                                      :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rshaheen <rshaheen@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/04/08 13:19:16 by rshaheen      #+#    #+#                 */
-/*   Updated: 2025/04/08 14:02:24 by rshaheen      ########   odam.nl         */
+/*   Created: 2025/04/08 13:18:33 by rshaheen      #+#    #+#                 */
+/*   Updated: 2025/04/08 13:52:32 by rshaheen      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
-
+#include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-class PhoneBook 
+int main(int argc, char **argv) 
 {
-
-	private:
-
-	Contact contacts[8];
-	size_t contactIndex;
-	void 	addContact(Contact newContact);
-	void	processAdd();
-	void 	removeOldestContact();
-	void 	displayAllContacts();
-	void 	displayContactDetails(size_t);
-
-
-	public:             //to access things in c++ from main, they must be public
+    PhoneBook myBook;
 	
-	PhoneBook();
-	~PhoneBook() = default;
-
-
-	void run();
-};
-
-#endif
-
+    if (argc > 1)
+    {
+        (void)argv;
+        std::cout << "Error: This program does not take arguments.\n";
+        return 1;
+    }
+    myBook.run();
+    return 0;
+}

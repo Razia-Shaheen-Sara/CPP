@@ -6,14 +6,14 @@
 #    By: rshaheen <rshaheen@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2025/03/04 14:20:55 by rshaheen      #+#    #+#                  #
-#    Updated: 2025/03/04 14:20:56 by rshaheen      ########   odam.nl          #
+#    Updated: 2025/04/08 13:14:46 by rshaheen      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = megaphone
 
-SRC = megaphone.cpp
+SRC = MegaPhone.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
