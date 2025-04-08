@@ -25,9 +25,8 @@ static bool getValidatedInput(const std::string& prompt, std::string& output, si
     {
         std::cout << prompt;
         std::getline(std::cin, output);
-        
         if (std::cin.eof()) 
-            return false;    
+            return false;
         if (isEmptyOrWhitespace(output)) 
         {
             std::cout << "Error: Field cannot be empty\n";
@@ -47,6 +46,7 @@ static bool getValidatedInput(const std::string& prompt, std::string& output, si
  */
 void PhoneBook::removeOldestContact()
 {
+    if (contactIndex == 0) return;  // Prevent underflow caused by using size_t for contactIndex
     int i = 0;
 	while (i < 7)
     {

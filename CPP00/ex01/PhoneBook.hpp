@@ -9,7 +9,7 @@ class PhoneBook
 	private:
 
 	Contact contacts[8];
-	int contactIndex;
+	size_t contactIndex;
 	void 	addContact(Contact newContact);
 
 
@@ -19,7 +19,7 @@ class PhoneBook
 	void	processAdd();
 	void 	removeOldestContact();
 	void 	displayAllContacts();
-	void 	displayContactDetails(int);
+	void 	displayContactDetails(size_t);
 };
 
 #endif

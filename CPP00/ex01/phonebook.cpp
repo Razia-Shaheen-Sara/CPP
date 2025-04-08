@@ -24,7 +24,7 @@ void PhoneBook::displayAllContacts()
 		std::cout << "No contacts to display.\n";
 		return;
 	}
-	int i = 0;
+	size_t i = 0;
 	std::cout << std::setw(10) << "Index" << "|"
 			  << std::setw(10) << "First Name" << "|"
 			  << std::setw(10) << "Last Name" << "|"
@@ -39,7 +39,7 @@ void PhoneBook::displayAllContacts()
 	}
 }
 
-void PhoneBook::displayContactDetails(int index) 
+void PhoneBook::displayContactDetails(size_t index) 
 {
 	if (index >= 0 && index < contactIndex) 
 	{
@@ -56,12 +56,18 @@ void PhoneBook::displayContactDetails(int index)
 //std::cin reads input up to the first whitespace.
 //std::getline reads a full line, including spaces, until the user presses Enter (which triggers the newline).
 
-int main() 
+int main(int argc, char **argv) 
 {
     PhoneBook	myBook;
     std::string command;
 	Contact		newContact;
 	
+	if (argc > 1)
+	{
+		(void)argv;
+		std::cout << "Error: This program does not take arguments.\n";
+		return 1;
+	}
 	while (true) 
 	{
     
