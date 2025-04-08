@@ -90,7 +90,29 @@ It’s used to **initialize data members**. It can be private or public.
 
 ---
 
+**private data**
 Some data should be private to control access, preventing direct modifications(setting wrong values) from outside the class.
+
+### New concepts for the project:
+
+1. The class **contact** should have private parts! It is not mentioned in the subject but the eval very clearly asks for that!
+2. when we use private parts, those are not accessible from outside code. Then we need-----
+3. 🔐 Getters and Setters
+Private fields can't be accessed directly from outside the class.
+We use:
+
+Setters to assign values to private members
+Example: setFirstName(string)
+
+Getters to retrieve values
+Example: getFirstName()
+
+
+
+
+
+
+
 
 EDGE cases:
 
