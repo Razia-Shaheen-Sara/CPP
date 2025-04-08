@@ -8,40 +8,16 @@
 - **Object** = A real example/instance created from a class  
   Has its own copy of the class’s attributes and can use its methods.
 
-#### 🔧 Example:
-```cpp
-class Car {
-    void honk() {
-        std::cout << "Beep Beep!" << std::endl;
-    }
-};
-
-int main() {
-    Car myCar;        // Object
-    myCar.honk();     // Method call
-}
-```
-
 ---
-
-### 🔹 Metaphor
-| Concept    | Example           |
-|------------|-------------------|
-| Class      | Car blueprint     |
-| Object     | Real car (myCar)  |
-| Attribute  | Brand, color      |
-| Method     | honk(), start()   |
-| Behavior   | What the method does (e.g., sound horn) |
 
 
 # iostream Library in C++
 
-## **`iostream`** Overview
 - **Type**: Library
 - **Purpose**: Provides facilities for input and output (I/O) operations in C++.
 - **Included in**: `<iostream>`
   
-## **Key Components**
+## **Example Components**
 1. **`std::cin`**: 
    - Type: Input stream object (instance of `std::istream`).
    - Purpose: Used to receive input from the user (keyboard).
@@ -97,7 +73,7 @@ int main()
     std::cout << "Your age is: " << age << std::endl;  // Output to user
     return 0;
 }
-
+```
 ---
 
 ### **Namespaces** in a Library
